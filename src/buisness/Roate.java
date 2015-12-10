@@ -5,6 +5,7 @@
  */
 package buisness;
 
+import view.RoView;
 /**
  *
  * @author KiritoKazuto
@@ -13,6 +14,8 @@ public class Roate {
     private String text1;
     private String text2;
     private String text3;
+    
+    private RoView view;
     
     public String getText1(){
         return this.text1;
@@ -39,5 +42,9 @@ public class Roate {
         text2 = text1;
         text1 = save;
         System.out.println(text1 + "\t" + text2 + "\t" + text3);
+    }
+    
+    public void registrate(RoView view){
+        this.view = view;
     }
 }
