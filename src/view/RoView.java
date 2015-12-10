@@ -64,6 +64,14 @@ public class RoView extends Stage{
     public RoView() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    
+    public void modelChanged(){
+        txt1.setText(model.getText1());
+        txt2.setText(model.getText2());
+        txt3.setText(model.getText3());
+    }
+    
     //inner class - inwendige klasse
     class BtnUpHandler implements EventHandler <ActionEvent>{
         public void handle(ActionEvent e){
