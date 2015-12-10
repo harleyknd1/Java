@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import buisness.Roate;
 
 /**
  *
@@ -25,8 +26,13 @@ public class RoView extends Stage{
    private final int HGAP = 100;
       private TextField txt1, txt2, txt3;
     private Button btnUp, btnDown;
+    private final Roate model;
+    
     //constructer to build the form
-    public RoView(){
+    public RoView(Roate model){
+        
+        this.model = model;
+        
         this.txt1 = new TextField();
         this.txt2 = new TextField();
         this.txt3 = new TextField();
@@ -54,9 +60,14 @@ public class RoView extends Stage{
         setTitle("Rotate");
         show();
     }
+
+    public RoView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     //inner class - inwendige klasse
     class BtnUpHandler implements EventHandler <ActionEvent>{
         public void handle(ActionEvent e){
+            model.rotateUp();
         //String save = txt2.getText();
         //txt2.setText(txt3.getText());
         //txt3.setText(txt1.getText());
@@ -67,6 +78,7 @@ public class RoView extends Stage{
     }
          class BtnDownHandler implements EventHandler <ActionEvent>{
         public void handle(ActionEvent e){
+            model.rotateDown();
        // String save = txt2.getText();
        // txt2.setText(txt1.getText());
        // txt1.setText(txt3.getText());

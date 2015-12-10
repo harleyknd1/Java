@@ -6,6 +6,7 @@
 package rotate;
 
 import view.RoView;
+import buisness.Roate;
 import javafx.application.Application;
 
 import javafx.stage.Stage;
@@ -18,6 +19,7 @@ public class RotateStart extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+        Roate model = new Roate();
         RoView view = new RoView();
     }
     
