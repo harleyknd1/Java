@@ -34,14 +34,12 @@ public class Roate {
         text1 = text2;
         text2 = text3;
         text3 = save;
-        System.out.println(text1 + "\t" + text2 + "\t" + text3);
     }
     public void rotateDown(){
         String save = text3;
         text3 = text2;
         text2 = text1;
         text1 = save;
-        System.out.println(text1 + "\t" + text2 + "\t" + text3);
     }
     
     public void registrate(RoView view){
